@@ -1,0 +1,20 @@
+.test {
+  color: red;
+}
+
+.back {
+  position: absolute;
+  left: 720px;
+  top: 170px;
+}
+
+.frontOne {
+  position: absolute;
+  left: 500px;
+}
+
+.frontTwo {
+  position: absolute;
+  left: 610px;
+  top: 230px;
+}
