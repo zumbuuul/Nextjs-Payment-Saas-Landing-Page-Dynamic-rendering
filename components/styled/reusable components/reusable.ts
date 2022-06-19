@@ -1,4 +1,4 @@
-import styled, { StyledProps } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 interface IColoredCircle {
   readonly backgroundColor: string;
@@ -15,4 +15,16 @@ export const ColoredCircle = styled.div<IColoredCircle>`
   background-color: ${(props: any): string => props.backgroundColor};
   width: ${(props: any): string => props.size};
   height: ${(props: any): string => props.size};
+`;
+
+export const YellowishBody = createGlobalStyle`
+body,html{
+  background-color:#f2f2f2;
+  margin:0;
+  width:100%
+}
+
+*{
+  box-sizing:border-box ;
+}
 `;
