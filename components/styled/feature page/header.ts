@@ -8,7 +8,7 @@ export const HeroHeader = styled.div`
   row-gap: 50px;
   @media (max-width: 900px) {
     flex-direction: column;
-    margin: 25vh auto;
+    margin: 25vh auto 15vh auto;
     align-items: center;
   }
 `;

@@ -14,6 +14,8 @@ import {
   HeroPhoneWrapper,
 } from "../styled/feature page/herocontent";
 
+import { ColoredCircle } from "../styled/reusable components/reusable";
+
 import Image from "next/image";
 
 function FeatureHero() {
@@ -48,7 +50,7 @@ function FeatureHero() {
             </HeroText>
           </HeroTextPiece>
         </HeroTextSection>
-        <HeroPhoneWrapper>
+        <HeroPhoneWrapper size="600px" backgroundColor="#D5E1DC">
           <Image
             src="/feature.png"
             alt="Feature phones"

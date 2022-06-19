@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { ColoredCircle } from "../reusable components/reusable";
+
 export const HeroMainContent = styled.div`
   display: flex;
   justify-content: center;
@@ -10,15 +12,8 @@ export const HeroMainContent = styled.div`
   }
 `;
 
-export const HeroPhoneWrapper = styled.div`
-  background-color: #d5e1dc;
-  border-radius: 50%;
-  width: 570px;
-  height: 570px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 80px;
+export const HeroPhoneWrapper = styled(ColoredCircle)`
+  margin: 0 100px 0 100px;
   @media (max-width: 1060px) {
     display: none;
   }
@@ -50,5 +45,5 @@ export const HeroTextHeader = styled.h1`
 export const HeroText = styled.p`
   font-size: 1.2rem;
   color: #191d2a;
-  width: 80%;
+  width: 100%;
 `;

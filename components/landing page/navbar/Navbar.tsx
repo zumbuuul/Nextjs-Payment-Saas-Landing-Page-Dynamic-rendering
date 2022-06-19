@@ -12,7 +12,9 @@ import Link from "next/link";
 function Navbar() {
   return (
     <NavbarElement>
-      <Image src="/pay.png" alt="Pay Logo" width="64px" height="64px"></Image>
+      <div>
+        <Image src="/pay.png" alt="Pay logo" width="64px" height="48px"></Image>
+      </div>
       <NavbarSpaceElementSmall></NavbarSpaceElementSmall>
       <NavbarText>
         <Link href="/">
