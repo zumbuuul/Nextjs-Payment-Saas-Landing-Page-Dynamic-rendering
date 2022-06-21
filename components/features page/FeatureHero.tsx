@@ -18,7 +18,7 @@ import { ColoredCircle } from "../styled/reusable components/reusable";
 
 import Image from "next/image";
 
-function FeatureHero() {
+function FeatureHero(props: {}) {
   return (
     <>
       <HeroHeader>
