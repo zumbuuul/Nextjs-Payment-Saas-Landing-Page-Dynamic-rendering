@@ -21,14 +21,15 @@ export const NavbarText = styled.p`
   }
 `;
 
-export const NavbarDownloadButton = styled.button`
+export const NavbarDownloadButton = styled.div`
+  display: flex;
+  padding: 0 40px;
+  align-items: center;
   color: #191d2a;
   font-size: 1.15rem;
   font-weight: bold;
   background-color: white;
-  border: none;
-  padding: 1vw 2vw;
-  border-radius: 20px;
+  border-radius: 12px;
   @media (max-width: 1060px) {
     font-size: 1rem;
   }

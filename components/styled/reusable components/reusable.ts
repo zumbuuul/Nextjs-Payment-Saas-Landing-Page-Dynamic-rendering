@@ -28,3 +28,14 @@ body,html{
   box-sizing:border-box ;
 }
 `;
+
+export const GreenishBody = createGlobalStyle`
+body,html{
+  background-color:#ECF1EF;
+  margin:0;
+  width:100%
+}
+
+*{
+  box-sizing:border-box ;
+}`;

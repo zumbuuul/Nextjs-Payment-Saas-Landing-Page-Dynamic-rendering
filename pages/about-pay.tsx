@@ -10,8 +10,15 @@ function AboutPayPage() {
       <AboutPayHeader></AboutPayHeader>
       <AboutPayHero></AboutPayHero>
       <LandingPageFooter></LandingPageFooter>
+      <style jsx global>{`
+        body {
+          background-color: #ecf1ef;
+        }
+      `}</style>
     </>
   );
 }
+
+//#ECF1EF;
 
 export default AboutPayPage;

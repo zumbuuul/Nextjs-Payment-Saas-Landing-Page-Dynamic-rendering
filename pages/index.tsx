@@ -13,6 +13,11 @@ function LandingPage() {
         <PhoneSection></PhoneSection>
       </HeroWrapper>
       <LandingPageFooter></LandingPageFooter>
+      <style jsx global>{`
+        body {
+          background-color: #ededed;
+        }
+      `}</style>
     </>
   );
 }

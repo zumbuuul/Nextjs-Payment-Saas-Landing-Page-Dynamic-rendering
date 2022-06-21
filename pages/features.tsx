@@ -8,6 +8,11 @@ function FeaturesPage() {
       <Navbar></Navbar>
       <FeatureHero></FeatureHero>
       <LandingPageFooter></LandingPageFooter>
+      <style jsx global>{`
+        body {
+          background-color: #ffffff;
+        }
+      `}</style>
     </>
   );
 }

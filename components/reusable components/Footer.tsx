@@ -81,6 +81,11 @@ function LandingPageFooter() {
         </FooterDownloads>
       </FooterWrapper>
       <FooterBottomText>©.Pay2022. All rights reserved.</FooterBottomText>
+      <style jsx global>{`
+        body {
+          background-color: #ffffff;
+        }
+      `}</style>
     </>
   );
 }
