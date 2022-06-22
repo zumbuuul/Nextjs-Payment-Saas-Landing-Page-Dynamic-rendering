@@ -1,18 +1,24 @@
+import { NextPage } from "next";
 import FeatureHero from "../components/features page/FeatureHero";
 import Navbar from "../components/landing page/navbar/Navbar";
 import LandingPageFooter from "../components/reusable components/Footer";
 
 import { getAllFeatures } from "../fake-api/featuresApi";
 
-interface IProps {
-  num: number;
-}
+type Feature = {
+  featureTitle: string;
+  featureDescription: string;
+};
 
-function FeaturesPage() {
+type obj = {
+  data: Feature[];
+};
+
+const FeaturesPage: NextPage<obj> = ({ data }): JSX.Element => {
   return (
     <>
       <Navbar></Navbar>
-      <FeatureHero></FeatureHero>
+      <FeatureHero data={data}></FeatureHero>
       <LandingPageFooter></LandingPageFooter>
       <style jsx global>{`
         body {
@@ -21,11 +27,10 @@ function FeaturesPage() {
       `}</style>
     </>
   );
-}
+};
 
 export async function getServerSideProps() {
   const data = await getAllFeatures();
-
   return { props: { data } };
 }
 

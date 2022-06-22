@@ -7,23 +7,30 @@ import {
 
 import {
   HeroMainContent,
-  HeroText,
-  HeroTextHeader,
   HeroTextSection,
-  HeroTextPiece,
   HeroPhoneWrapper,
 } from "../styled/feature page/herocontent";
 
-import { ColoredCircle } from "../styled/reusable components/reusable";
+import FeatureComponent from "./FeatureComponent";
 
 import Image from "next/image";
+import { NextPage } from "next";
 
-function FeatureHero(props: {}) {
+type Feature = {
+  featureTitle: string;
+  featureDescription: string;
+};
+
+type obj = {
+  data: Feature[];
+};
+
+const FeatureHero: NextPage<obj> = ({ data }): JSX.Element => {
   return (
     <>
       <HeroHeader>
         <HeroHeaderMainText>
-          Premium <br></br> features of{" "}
+          Premium <br></br> features of
           <HeroHeaderColoredText>.Pay</HeroHeaderColoredText>
         </HeroHeaderMainText>
         <HeroHeaderSmallText>
@@ -35,20 +42,12 @@ function FeatureHero(props: {}) {
       <></>
       <HeroMainContent>
         <HeroTextSection>
-          <HeroTextPiece>
-            <HeroTextHeader>Send Money</HeroTextHeader>
-            <HeroText>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-              fugit aliquid dolores cumque eos facilis.
-            </HeroText>
-          </HeroTextPiece>
-          <HeroTextPiece>
-            <HeroTextHeader>Money Request</HeroTextHeader>
-            <HeroText>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-              ratione repudiandae officiis quibusdam reprehenderit non.
-            </HeroText>
-          </HeroTextPiece>
+          {data.slice(0, 2).map((feature) => (
+            <FeatureComponent
+              key={feature.featureTitle}
+              featureData={feature}
+            ></FeatureComponent>
+          ))}
         </HeroTextSection>
         <HeroPhoneWrapper size="600px" backgroundColor="#D5E1DC">
           <Image
@@ -59,24 +58,16 @@ function FeatureHero(props: {}) {
           ></Image>
         </HeroPhoneWrapper>
         <HeroTextSection>
-          <HeroTextPiece>
-            <HeroTextHeader>Pay Bill</HeroTextHeader>
-            <HeroText>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              eligendi, fuga aut necessitatibus aliquid enim.
-            </HeroText>
-          </HeroTextPiece>
-          <HeroTextPiece>
-            <HeroTextHeader>Mobile Recharge</HeroTextHeader>
-            <HeroText>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
-              quidem aperiam, illo repellendus ex aliquam.
-            </HeroText>
-          </HeroTextPiece>
+          {data.slice(2, 4).map((feature) => (
+            <FeatureComponent
+              key={feature.featureTitle}
+              featureData={feature}
+            ></FeatureComponent>
+          ))}
         </HeroTextSection>
       </HeroMainContent>
     </>
   );
-}
+};
 
 export default FeatureHero;

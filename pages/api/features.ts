@@ -1,3 +1,10 @@
+import { NextApiRequest, NextApiResponse } from "next";
+
+type Feature = {
+  featureTitle: string;
+  featureDescription: string;
+};
+
 const featuresData = [
   {
     featureTitle: "Send Money",
@@ -20,13 +27,3 @@ const featuresData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed maximus odio.",
   },
 ];
-
-export const getAllFeatures = () => {
-  const featuresPromise = new Promise((res, rej) => {
-    setTimeout(() => {
-      res(featuresData);
-    }, 500);
-  });
-
-  return featuresPromise;
-};
