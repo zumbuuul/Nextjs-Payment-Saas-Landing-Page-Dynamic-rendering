@@ -26,6 +26,8 @@ type obj = {
 };
 
 const FeatureHero: NextPage<obj> = ({ data }): JSX.Element => {
+  if (!data) return <></>;
+
   return (
     <>
       <HeroHeader>

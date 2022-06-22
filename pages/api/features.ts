@@ -27,3 +27,10 @@ const featuresData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed maximus odio.",
   },
 ];
+
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Feature[]>
+) {
+  res.status(200).json(featuresData);
+}

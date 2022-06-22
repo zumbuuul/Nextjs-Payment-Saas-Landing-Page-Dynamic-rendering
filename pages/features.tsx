@@ -3,8 +3,6 @@ import FeatureHero from "../components/features page/FeatureHero";
 import Navbar from "../components/landing page/navbar/Navbar";
 import LandingPageFooter from "../components/reusable components/Footer";
 
-import { getAllFeatures } from "../fake-api/featuresApi";
-
 type Feature = {
   featureTitle: string;
   featureDescription: string;
@@ -30,7 +28,8 @@ const FeaturesPage: NextPage<obj> = ({ data }): JSX.Element => {
 };
 
 export async function getServerSideProps() {
-  const data = await getAllFeatures();
+  const response = await fetch("http://localhost:3000/api/features");
+  const data = await response.json();
   return { props: { data } };
 }
 
